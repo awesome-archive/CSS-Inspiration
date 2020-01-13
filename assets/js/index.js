@@ -4,6 +4,10 @@ const gitalk = new Gitalk({
     repo: 'CSS-Inspiration',
     owner: 'chokcoco',
     admin: ['chokcoco'],
-    distractionFreeMode: false,
-    id: md5(window.location.pathname)
+    distractionFreeMode: true,
+    id: md5(window.location.hash)
 });
+
+window.gittalk = gitalk;
+
+gitalk.render('app');
